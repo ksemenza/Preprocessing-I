@@ -2,18 +2,77 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
-  <title>My Resume</title>
-
-  <link rel="stylesheet" href="css/index.css">
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Kim Semenza Resume</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <script src='main.js'></script>
+   <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet/less" href="/less/index.less" type="text/css" />
+<script src="http://lesscss.googlecode.com/files/less-1.0.30.min.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
-
 <body>
-  <h1>My Resume</h1>
+  <div class = 'container'>  <!-- start of container -->
+    <header><!-- start of header -->
+     <nav class='topNav'>
+         <a id='intro' href='#'>Intro</a>
+         <a id='skiils' href='#'>Skills</a>
+         <a id='history' href='#'>History</a>
+         <a id='contact' href='#'>Contact </a>
+     </nav> 
+ 
+ </header>
+ <div class='heroImg'><!-- start of hero -->
+ <section class='heroSection'> 
+
+     <div class = 'heroTxt'>
+         <h1>Kim Semenza</h1>
+         <p>Web Development Full Stack</p>
+     </div>   
+ </section>
+</div>
+ <section id='intro' class='mainContent'><!-- start of mainContnet -->
+  <div class = 'introBox'>
+     <h2> Introduction </h2>
+     <p>Through my 16 years in human services and my education from Lesley University; 
+       I have learn to easily and effectively multi-tasking, have
+        an in depth knowledge of conflict resolution, and the ability to provide and create a supportive
+        and efficient work environment.  Identifying improved approaches and enhanced solutions to business practices are
+        challenges and activities that drive and inspire me. I believe collaboration, positivity
+        and motivation are a to conerstone to a successful busines. </p>
+    </div>
+    </section>
+    <section id = 'skills' class = 'skillsList'>
+      <h2>Skills</h2>
+      <ul>
+        <li>ServSafe Mananger Certified</li>
+        <li>eTips Certified</li>
+        <li>Crowd Managment Certified</li>
+        <li>Allergen Certified</li>
+        <li>First Aid & CPR</li>
+      </ul>
+
+    </section>
+
+ <footer><!-- start of footer -->
+  <nav class = 'bottomNav'><!-- start of bottomNav -->
+    <a href='#'>Intro</a>
+    <a href='#'>Skills</a>
+    <a href='#'>History</a>
+    <a href='#'>Contact</a>
+  </nav>
+  <div class = 'contactInfo'>
+  <address>99A Nashua Road North Billerica</address>
+  <phone>781.866.1073</phone>
+  <email>ksemenza.247@gmail.com</email>
+  <copyright>&copyGuin Productions</copyright>
+</div>
+</div>
+ </footer>
+</div> <!-- end of container -->
 </body>
 </html>

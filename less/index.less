@@ -3,6 +3,18 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+@mainfont:'Solway', serif;
+@lightblue: #82b3c9;
+@darkblue: #1995AD;
+@offwhite:  #F1F1F2;
+@borderpx: 3px;
+@box3dbottom:0 0 20px rgba(0,0,0,0.8);
+@boxshadowcolor: lightcyan;
+@box3dtop:0 0 20px rgba(0,0,0,0.8);
+@boxpadding: 8%;
+@titleSize: 3.6rem;
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,10 +63,145 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+	font-size: 62.5%;
 }
+html, body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+  }
+  .container {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5%;	
+	margin: 0 auto;
+	width: 900px;
+
+  }
+  
+  header {
+	width: 100%;
+	
+	
+	.topNav {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 3%;
+
+	}//end of topNav
+
+	  a{
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  color: @darkblue;
+		  text-decoration: none;
+		  font-size: 2.0rem;
+		  background: @offwhite;
+		  width: 18%;
+		  height: 42px;
+		  border-top: 3px solid @lightblue ;
+		  font-family: @mainfont;
+		  border-radius: 5px;;
+		  border-right: 1px solid @boxshadowcolor;
+		  border-left: 1px solid @boxshadowcolor;
+		  box-shadow: @box3dtop;
+
+
+	  }//end of anchor topNav
+
+  }//end of header
+  
+  
+  /* The hero image */
+  .heroImg {
+	background-image: url('/images/heroImg2.jpg');
+	background-size: cover;
+	height:350px;
+	width: 100%;
+  	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px outset @boxshadowcolor;
+	border-bottom: none;
+
+
+  }// end of heroImg
+
+  .heroSection {
+	  width: 100%;
+	  height: 350px;
+	  border: @borderpx outset @boxshadowcolor;
+	  border-top: none;
+	
+	.heroTxt {
+		display: flex;
+		justify-content: space-around;
+		color: black;
+		font-size: 3.@titleSize;
+		line-height: 3.8rem;
+		width: 100%;
+		border-bottom: @borderpx inset @boxshadowcolor;
+		padding: 1%;
+		background:@lightblue;
+
+		font-weight: bolder;
+		font-family: @mainfont;
+
+	  }//end of heroTxt
+	}//end of hero section
+
+  .mainContent {
+	border: @borderpx outset @boxshadowcolor;
+	border-bottom: @borderpx inset @boxshadowcolor;
+	  padding: 2% 5%;
+	  box-shadow: @box3dbottom;
+	  height: fit-content;
+	  color:@darkblue;
+	  font-family: @mainfont;
+
+	  .introBox {
+		  border: @borderpx outset @lightblue;
+	  }
+
+
+	  h2 {
+		  font-size: 2.4rem;
+		  margin-bottom: 3%;
+		  padding: 5%;
+		  padding-bottom: 1%;
+		  color:black;
+		  
+
+	  }//end of h2
+
+	  p {
+		  font-size: 1.8rem;
+		  padding-bottom: @boxpadding;
+		  padding-right: @boxpadding;
+		  padding-left: @boxpadding;
+		  
+	  }//end of p
+  }//end of mainContent
+
+  .skillsList {
+
+	h2 {
+		font-size:3.2rem;
+
+	}
+
+
+  }
+
+
+  
+
 

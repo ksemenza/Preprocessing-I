@@ -2,6 +2,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: 'Solway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Solway Regular'), local('Solway-Regular'), url(https://fonts.gstatic.com/s/solway/v1/AMOQz46Cs2uTAOCmhXo5.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -106,8 +113,6 @@ section {
 }
 body {
   line-height: 1;
-  background-color: red;
-  color: blue;
 }
 ol,
 ul {
@@ -132,7 +137,101 @@ table {
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  margin: 0 auto;
+  width: 900px;
+}
+header {
+  width: 100%;
+}
+header .topNav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+}
+header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1995AD;
+  text-decoration: none;
+  font-size: 2rem;
+  background: #F1F1F2;
+  width: 18%;
+  height: 42px;
+  border-top: 3px solid #82b3c9;
+  font-family: 'Solway', serif;
+  border-radius: 5px;
+  border-right: 1px solid lightcyan;
+  border-left: 1px solid lightcyan;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+/* The hero image */
+.heroImg {
+  background-image: url('/images/heroImg2.jpg');
+  height: 350px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px outset lightcyan;
+  border-bottom: none;
+}
+.heroSection {
+  width: 100%;
+  height: 350px;
+  border: 3px outset lightcyan;
+  border-top: none;
+}
+.heroSection .heroTxt {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  width: 100%;
+  border-bottom: 3px inset lightcyan;
+  padding: 1%;
+  background: #82b3c9;
+  font-weight: bolder;
+  font-family: 'Solway', serif;
+}
+.mainContent {
+  border: 3px outset lightcyan;
+  border-bottom: 3px inset lightcyan;
+  padding: 2% 5%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  height: fit-content;
+  color: #1995AD;
+  font-family: 'Solway', serif;
+}
+.mainContent .introBox {
+  border: 3px outset #82b3c9;
+}
+.mainContent h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3%;
+  padding: 5%;
+  padding-bottom: 1%;
+  color: black;
+}
+.mainContent p {
+  font-size: 1.8rem;
+  padding-bottom: 8%;
+  padding-right: 8%;
+  padding-left: 8%;
 }
