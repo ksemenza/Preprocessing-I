@@ -14,6 +14,33 @@
 @box3dtop:0 0 20px rgba(0,0,0,0.8);
 @boxpadding: 8%;
 @titleSize: 3.6rem;
+@topBottBorder:  @borderpx inset @boxshadowcolor;
+@contenFontSize: 2.0rem;
+@sectionSep: .4%;
+@contentIndent:2%;
+@borderRadius: 5px;
+.paddingSelect {
+	padding-bottom: @boxpadding;
+	padding-right: @boxpadding;
+	padding-left: @boxpadding;
+}
+.contentBox{
+	padding: 4% 9%;
+	box-shadow: @box3dtop;
+	height: fit-content;
+	width: 100%;
+	margin-top:@sectionSep;
+}
+.titleFont {
+	font-size:@titleSize;
+	padding-bottom: 2%;
+	color:@darkblue;
+}
+.beveledBoxes {
+	border: @borderpx outset @offwhite;
+	padding: 2%;
+	font-size: @contenFontSize;
+}
 
 
 html, body, div, span, applet, object, iframe,
@@ -35,6 +62,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -83,19 +112,60 @@ html {
 	margin-top: 5%;	
 	margin: 0 auto;
 	width: 900px;
+	font-family: @mainfont;
 
-  }
+	@media(max-width: 786px){
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 5%;	
+		margin: 0 auto;
+		width: 100%;
+		font-family: @mainfont;
+
+		}
+
+		@media(max-width:480px) {
+			display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5%;	
+	margin: 0 auto;
+	width: 100%;
+	font-family: @mainfont;
+
+		}
+	
+
+  }//end of container
   
   header {
 	width: 100%;
-	
-	
+
+	@media(max-width: 480px) {
+		width: 100%;
+
+	}
 	.topNav {
 		display: flex;
 		justify-content: space-around;
 		margin-top: 3%;
 
+		@media(max-width: 786px){
+		justify-content: flex-start;
+		}
+
+		@media(max-width:480px) {
+			flex-direction: column;
+			align-items: center;
+			justify-items: center;
+			width: 100%;
+
+		}//end of @media 480px
+
 	}//end of topNav
+
+
 
 	  a{
 		  display: flex;
@@ -109,13 +179,20 @@ html {
 		  height: 42px;
 		  border-top: 3px solid @lightblue ;
 		  font-family: @mainfont;
-		  border-radius: 5px;;
+		  border-radius:@borderRadius;
 		  border-right: 1px solid @boxshadowcolor;
 		  border-left: 1px solid @boxshadowcolor;
 		  box-shadow: @box3dtop;
 
-
+		  @media(max-width: 786px){
+			width: 100%;			}
+	
+		  @media(max-width:480px) {
+			  width: 55%;		 
+		  }//end of a 480px
 	  }//end of anchor topNav
+
+	
 
   }//end of header
   
@@ -140,66 +217,162 @@ html {
 	  height: 350px;
 	  border: @borderpx outset @boxshadowcolor;
 	  border-top: none;
-	
+	  border-radius: 5px;
 	.heroTxt {
 		display: flex;
 		justify-content: space-around;
 		color: black;
-		font-size: 3.@titleSize;
+		font-size: @titleSize;
 		line-height: 3.8rem;
 		width: 100%;
 		border-bottom: @borderpx inset @boxshadowcolor;
 		padding: 1%;
 		background:@lightblue;
-
 		font-weight: bolder;
 		font-family: @mainfont;
+		border-radius: @borderRadius;
+		
+		@media(max-width: 786px){		
+			flex-direction: column;
+   
+		 }//end of @media 768px
 
+		 @media(max-width:480px) {
+			 text-align: center;
+			 width: 100%;
+	
+
+		}//end of @media 480px
+
+
+	
 	  }//end of heroTxt
+
+
+		
 	}//end of hero section
 
   .mainContent {
 	border: @borderpx outset @boxshadowcolor;
-	border-bottom: @borderpx inset @boxshadowcolor;
+	border-bottom: @topBottBorder;
 	  padding: 2% 5%;
 	  box-shadow: @box3dbottom;
 	  height: fit-content;
-	  color:@darkblue;
-	  font-family: @mainfont;
-
+	  
 	  .introBox {
 		  border: @borderpx outset @lightblue;
-	  }
+		  @media(max-width: 786px){
+			  border:none;
+		}
+	  }// end of intro box
 
 
 	  h2 {
-		  font-size: 2.4rem;
-		  margin-bottom: 3%;
-		  padding: 5%;
-		  padding-bottom: 1%;
-		  color:black;
+		  .titleFont;
 		  
 
 	  }//end of h2
 
 	  p {
 		  font-size: 1.8rem;
-		  padding-bottom: @boxpadding;
-		  padding-right: @boxpadding;
-		  padding-left: @boxpadding;
+		  .paddingSelect();
+		
 		  
 	  }//end of p
   }//end of mainContent
 
   .skillsList {
 
+	  padding: 4% 9%;
+	  box-shadow: @box3dtop;
+	  height: fit-content;
+	  width: 100%;
+	  margin-top:@sectionSep;
+
 	h2 {
-		font-size:3.2rem;
+		font-size:@titleSize;
+		padding-bottom: 2%;
+		color:@darkblue;
 
-	}
+	}//end h2
+
+	ul {
+		border: @borderpx groove @lightblue;
+		margin-left:@contentIndent;
+	}// end ul
+
+	li {
+		border: @borderpx outset @offwhite;
+		padding: 2%;
+		font-size: @contenFontSize;
+
+	} //end li
+}//end of skillList
+
+.expSec {
+.contentBox();		
+h2 {
+	.titleFont();
+	
+}//end of h2
+
+.topExp {
+	background-color:@lightblue;
+	display: flex;
+	justify-content: space-around;
+	border: @borderpx outset @offwhite;
+		padding: 2%;
+		font-size: @contenFontSize;
+		width: 100%;
+
+	
+}// end of topExp
+
+.jobBox{
+.beveledBoxes();
+
+}//end of jobBox
+
+p {
+	margin: 3%;
+}//end of p
+
+}//end of expSec
+
+footer {
+	position: fixed;
+	display: flex;
+	flex-direction: column-reverse;	
+	justify-self: baseline;
+	align-items: center;
+	margin: 0 auto;	
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	border-top: 1px inset @lightblue;
+
+.contactInfo {
+	width: 100%;
+	background: white;
+	padding-top:2%;
+}//end of contact info
+.bottomNav {
+	display: flex;
+	justify-content:space-evenly;
+	width: 100%;
+	background: white;
+	padding-top:2%;
 
 
-  }
+}// end of bottomNav
+a {
+	text-decoration: none;
+	color: @darkblue;
+}//end of a
+
+}//end of footer
+  
 
 
   
