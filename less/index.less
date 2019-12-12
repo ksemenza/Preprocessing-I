@@ -153,7 +153,7 @@ html {
 
 		@media(max-width: 786px){
 		justify-content: flex-start;
-		}
+		}//end of 786px
 
 		@media(max-width:480px) {
 			flex-direction: column;
@@ -184,18 +184,35 @@ html {
 		  border-left: 1px solid @boxshadowcolor;
 		  box-shadow: @box3dtop;
 
-		  @media(max-width: 786px){
-			width: 100%;			}
+		
+		  
+
+	  @media(max-width: 786px){
+			width: 100%;	
+		
+				
+		}//end of 786px
 	
 		  @media(max-width:480px) {
 			  width: 55%;		 
 		  }//end of a 480px
 	  }//end of anchor topNav
 
-	
+	  a:hover {
+		  color: @offwhite;
+		  background-color: @lightblue;
+	  }
+
+	  a:active {
+		  color:@offwhite;
+		  background: @darkblue;
+	  }
+
 
   }//end of header
-  
+
+
+
   
   /* The hero image */
   .heroImg {
@@ -226,7 +243,7 @@ html {
 		line-height: 3.8rem;
 		width: 100%;
 		border-bottom: @borderpx inset @boxshadowcolor;
-		padding: 1%;
+		padding: 3%;
 		background:@lightblue;
 		font-weight: bolder;
 		font-family: @mainfont;
@@ -269,7 +286,12 @@ html {
 
 	  h2 {
 		  .titleFont;
-		  
+
+		  padding-left: 2%;
+		  padding-top: 2%;
+		  @media(max-width:480px) {
+		text-align: center;		}
+
 
 	  }//end of h2
 
@@ -294,6 +316,11 @@ html {
 		padding-bottom: 2%;
 		color:@darkblue;
 
+		  
+		@media(max-width:480px) {
+			text-align: center;		}
+	
+
 	}//end h2
 
 	ul {
@@ -310,9 +337,16 @@ html {
 }//end of skillList
 
 .expSec {
-.contentBox();		
+.contentBox();
+
+margin-bottom: 15%;
+
 h2 {
 	.titleFont();
+	  
+	@media(max-width:480px) {
+		text-align: center;		}
+
 	
 }//end of h2
 
@@ -340,7 +374,7 @@ p {
 }//end of expSec
 
 footer {
-	position: fixed;
+
 	display: flex;
 	flex-direction: column-reverse;	
 	justify-self: baseline;
@@ -349,32 +383,26 @@ footer {
 	height: 100%;
 	width: 100%;
 	text-align: center;
-	font-size: 1.2rem;
 	border-top: 1px inset @lightblue;
 
 .contactInfo {
 	width: 100%;
 	background: white;
 	padding-top:2%;
+	font-size: 1.6rem;
 }//end of contact info
 .bottomNav {
 	display: flex;
 	justify-content:space-evenly;
 	width: 100%;
 	background: white;
-	padding-top:2%;
-
-
+	padding-top:1%;
 }// end of bottomNav
 a {
 	text-decoration: none;
 	color: @darkblue;
+	margin-bottom: 2%;
+	font-size: 1.6rem;
 }//end of a
 
-}//end of footer
-  
-
-
-  
-
-
+}
